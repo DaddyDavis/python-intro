@@ -1,22 +1,53 @@
 # python-intro
-👨‍💻 DEVRYS CODE LAB - AUSTIN DAVIS
-🚀 Project Overview
-This repository contains Python applications developed in a Linux environment (Fedora VM) for educational purposes, focusing on foundational concepts in software engineering, networking, and applied physics (Ham Radio).
-The environment is designed to support the requirements of Web and Mobile App Development curriculum.
-🛠️ Environment Configuration
- * Operating System: Fedora Linux (Workstation)
- * IDE: Visual Studio Code
- * Programming Language: Python 3.x
- * Network Status: Bridged Adapter (Accesses home router)
- * Security Lab: Paired with a Kali Linux VM (32GB RAM).
-📂 Key Projects
-| File Name | Description | Key Programming Concept |
-|---|---|---|
-| oop_encapsulation.py | Secure Hash Generator. Demonstrates Encapsulation (protecting private data like __hash_object). | OOP / Security |
-| oop_polymorphism.py | Device Report System. Demonstrates Polymorphism (different objects responding to the same display_info() command). | OOP |
-| oop_inheritance.py | Radio Class Hierarchy. Demonstrates Inheritance (specializing a BaofengRadio from a general RadioAntenna class). | OOP |
-| radio_horizon.py | VHF/UHF Horizon Calc. Uses the formula D = 1.41 * sqrt(H) to calculate line-of-sight distance. | Applied Physics / Math |
-| pingsweep.py | Network Recon Tool. A Python script that scans the local subnet using the system ping command (subprocess). | Networking / CLI |
-| web_app.py | Flask Web Server. A live web server deployed locally on port 5000 (used to send a neon green message to Cassie). | Web Development / Deployment |
+# 🐍 Austin's Python Projects
+*> A collection of Python tools for Automation, Ham Radio, and System Administration.*
 
+Welcome to my coding playground. This repository hosts various scripts I've built to solve real-world problems, from calculating radio antenna resonance to debloating government-issue Android phones.
 
+---
+
+## 📱 Android Automation Tools (New!)
+*Powered by ADB (Android Debug Bridge) & Python*
+
+### 🛠️ `debloat.py` - The Bloatware Killer
+A surgical tool designed to speed up budget Android devices (specifically the **Cloud Mobile AS65U**) by removing carrier bloatware and resource-heavy system apps.
+- **Features:** - Automatically detects connected phone via ADB.
+  - Removes 40+ pre-identified bloatware packages (Carrier apps, Facebook services, Unisoc loggers).
+  - Safe Mode: Skips essential system apps (Launcher, Keyboard) to prevent bricking.
+  - **Usage:** `python debloat.py`
+
+### 📡 `telemetry.py` - Live Signal Monitor
+A real-time dashboard that turns an Android phone into a Wi-Fi and Battery telemetry sensor.
+- **Features:**
+  - Live stream of Wi-Fi Signal Strength (RSSI in dBm).
+  - Battery voltage and temperature monitoring.
+  - Regex parsing to handle non-standard log outputs from budget phones.
+  - **Usage:** `python telemetry.py` (Great for site surveys/war driving).
+
+---
+
+## 📻 Ham Radio Utilities
+*Tools for Amateur Radio operators (Callsign: [Your Callsign Here])*
+
+- **`antenna_calc.py`**: Calculates the optimal length for dipole antennas based on frequency.
+- **`radio_horizon.py`**: Determines the visual and radio horizon distance based on antenna height.
+- **`oop_radio_horizon.py`**: An Object-Oriented version of the horizon calculator (demonstrating Class structures).
+
+---
+
+## 💻 Core Python Concepts
+*Scripts demonstrating fundamental programming principles.*
+
+- **`pingsweep.py`**: A network scanner to detect active devices on a local network.
+- **`oop_encapsulation.py`**: Demonstrates secure data handling using Getters/Setters.
+- **`oop_inheritance.py`**: Examples of class inheritance and hierarchy.
+- **`oop_polymorphism.py`**: Examples of flexible function usage across different classes.
+
+---
+
+## ⚙️ Setup & Requirements
+
+To run the Android tools, you need the `pure-python-adb` library:
+
+```bash
+pip install pure-python-adb
