@@ -2,7 +2,7 @@
 # 🐍 Austin's Python Projects
 *> A collection of Python tools for Automation, Ham Radio, and System Administration.*
 
-Welcome to my coding playground. This repository hosts various scripts I've built to solve real-world problems, from calculating radio antenna resonance to debloating government-issue Android phones.
+Welcome to my coding playground. This repository hosts various scripts I've built to solve real-world problems, from calculating radio antenna resonance to debloating Android phones.
 
 ---
 
